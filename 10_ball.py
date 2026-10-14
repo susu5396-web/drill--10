@@ -67,6 +67,7 @@ def reset_world():
     world.append(grass)
     for i in range(20):
         world.append(Ball1())
+        world.append(Ball2())
 
     
     
