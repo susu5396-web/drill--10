@@ -27,8 +27,9 @@ class Ball:
         self.image = load_image('ball41x41.png')
         self.x = random.randint(1,800)
         self.y = 80
+        self.speed = random.randint(4,8)
     def update(self):
-        self.y += 6
+        self.y += self.speed
         if self.y >= 590:
             for i in range(10):
                 self.y = random.randint(520, 590)
