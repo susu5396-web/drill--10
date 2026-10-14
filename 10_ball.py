@@ -40,25 +40,6 @@ class Ball:
 
     
         
-
-
-
-class Zombie:
-    def __init__(self):
-        self.x = 100
-        self.y = 170
-        self.frame = 0
-        self.image = load_image('zombie_run_animation.png')
-
-    def update(self):
-        self.frame = (self.frame + 1) % 10
-        self.x += 5
-    def draw(self):
-        frame_width = self.image.w // 10
-        frame_height = self.image.h
-        self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height, self.x, self.y,
-                             frame_width//2, frame_height//2)
-
 def reset_world():
     global running
     running = True
@@ -67,7 +48,6 @@ def reset_world():
     world = []
     grass = Grass()
     world.append(grass)
-    world.append(Zombie())
     for i in range(20):
         world.append(Ball())
 
