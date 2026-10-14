@@ -29,6 +29,8 @@ class Ball:
         self.y = 80
     def update(self):
         self.y += 6
+    def draw(self):
+        self.image.draw(self.x,self.y)
 
     
         
