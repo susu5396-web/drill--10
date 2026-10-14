@@ -33,16 +33,27 @@ class Ball1:
         if self.y >= 590:
             for i in range(10):
                 self.y = random.randint(520, 590)
+    def draw(self):
+        self.image.draw(self.x,self.y)
+            
 class Ball2:
     def __init__(self):
         self.image = load_image('ball21x21.png')
         self.x = random.randint(1,800)
         self.y = 80
+        self.speed = random.randint(4,8)
+    def update(self):
+        self.y += self.speed
+        if self.y >= 590:
+            for i in range(10):
+                self.y = random.randiant(520,590)
+    def draw(self):
+        self.image.draw(self.x,self.y)
+    
                 
 
             
-    def draw(self):
-        self.image.draw(self.x,self.y)
+    
 
     
         
