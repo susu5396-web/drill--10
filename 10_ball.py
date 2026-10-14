@@ -27,11 +27,11 @@ class Ball1:
         self.image = load_image('ball41x41.png')
         self.x = random.randint(1,800)
         self.y = 80
-        self.speed = random.randint(4,8)
+        self.speed = random.randint(6,10)
     def update(self):
         self.y += self.speed
         if self.y >= 590:
-            for i in range(10):
+            for i in range(20):
                 self.y = random.randint(520, 590)
     def draw(self):
         self.image.draw(self.x,self.y)
@@ -41,11 +41,11 @@ class Ball2:
         self.image = load_image('ball21x21.png')
         self.x = random.randint(1,800)
         self.y = 80
-        self.speed = random.randint(4,8)
+        self.speed = random.randint(6,10)
     def update(self):
         self.y += self.speed
         if self.y >= 600:
-            for i in range(10):
+            for i in range(20):
                 self.y = random.randint(530,600)
     def draw(self):
         self.image.draw(self.x,self.y)
@@ -55,8 +55,6 @@ class Ball2:
             
     
 
-    
-        
 def reset_world():
     global running
     running = True
@@ -68,15 +66,17 @@ def reset_world():
     for i in range(10):
         world.append(Ball1())
         world.append(Ball2())
+
+    team = [Boy() for i in range(11)]
+    world += team
        
 
     
     
+        
+    
 
   
-
-    team = [Boy() for i in range(11)]
-    world += team
 
     
 
