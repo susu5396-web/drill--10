@@ -22,6 +22,11 @@ class Boy:
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
 
+class Ball:
+    def __init__(self):
+        self.image = load_image('ball41x41.png')
+        
+
 
 class Zombie:
     def __init__(self):
