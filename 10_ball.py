@@ -22,7 +22,7 @@ class Boy:
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
 
-class Ball:
+class Ball1:
     def __init__(self):
         self.image = load_image('ball41x41.png')
         self.x = random.randint(1,800)
@@ -33,6 +33,12 @@ class Ball:
         if self.y >= 590:
             for i in range(10):
                 self.y = random.randint(520, 590)
+class Ball2:
+    def __init__(self):
+        self.image = load_image('ball21x21.png')
+        self.x = random.randint(1,800)
+        self.y = 80
+                
 
             
     def draw(self):
@@ -49,7 +55,7 @@ def reset_world():
     grass = Grass()
     world.append(grass)
     for i in range(20):
-        world.append(Ball())
+        world.append(Ball1())
 
     
     
