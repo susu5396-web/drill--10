@@ -27,6 +27,10 @@ class Ball:
         self.image = load_image('ball41x41.png')
         self.x = random.randint(1,800)
         self.y = 80
+    def update(self):
+        self.y += 6
+
+    
         
 
 
