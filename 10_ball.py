@@ -29,6 +29,8 @@ class Ball:
         self.y = 80
     def update(self):
         self.y += 6
+        if self.y >= 590:
+            self.y = 590
     def draw(self):
         self.image.draw(self.x,self.y)
 
