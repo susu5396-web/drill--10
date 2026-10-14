@@ -62,6 +62,8 @@ def reset_world():
     grass = Grass()
     world.append(grass)
     world.append(Zombie())
+    world.append(Ball())
+    
 
   
 
