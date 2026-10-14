@@ -30,7 +30,10 @@ class Ball:
     def update(self):
         self.y += 6
         if self.y >= 590:
-            self.y = 590
+            for i in range(10):
+                self.y = random.randint(520, 590)
+
+            
     def draw(self):
         self.image.draw(self.x,self.y)
 
