@@ -25,7 +25,10 @@ class Boy:
 class Ball:
     def __init__(self):
         self.image = load_image('ball41x41.png')
+        self.x = random.randint(1,800)
+        self.y = 80
         
+
 
 
 class Zombie:
