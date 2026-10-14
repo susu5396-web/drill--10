@@ -44,9 +44,9 @@ class Ball2:
         self.speed = random.randint(4,8)
     def update(self):
         self.y += self.speed
-        if self.y >= 590:
+        if self.y >= 600:
             for i in range(10):
-                self.y = random.randiant(520,590)
+                self.y = random.randint(530,600)
     def draw(self):
         self.image.draw(self.x,self.y)
     
@@ -65,9 +65,10 @@ def reset_world():
     world = []
     grass = Grass()
     world.append(grass)
-    for i in range(20):
+    for i in range(10):
         world.append(Ball1())
         world.append(Ball2())
+       
 
     
     
